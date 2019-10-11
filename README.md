@@ -4,4 +4,4 @@ Ubicar en la carpeta (siempre la dirección a localizar el proyecto no debe cont
 Ejecutar en la terminal: git clone https://github.com/nightpablo/TrabajoPractico-BarraganGallego-IC.git
 Abrir Eclipse
 Import Project -> Java -> Existing Projects into Workspace -> Select root directory ahi la carpeta que clonaron
-Correr en: Test -> PatternRecognitionTest.java
+Correr en: Test -> VentanaPrincipal.java
