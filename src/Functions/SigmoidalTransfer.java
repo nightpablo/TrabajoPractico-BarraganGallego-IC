@@ -1,8 +1,10 @@
 package Functions;
 
+import java.io.Serializable;
+
 import Models.TransferFunction;
 
-public class SigmoidalTransfer implements TransferFunction 
+public class SigmoidalTransfer implements TransferFunction, Serializable
 {
 	@Override
 	public double evalute(double value) 

@@ -4,8 +4,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
-public class MultiLayerPerceptron implements Cloneable
+public class MultiLayerPerceptron implements Cloneable, Serializable
 {
 	protected double			fLearningRate = 0.6;
 	protected Layer[]			fLayers;
@@ -200,6 +201,7 @@ public class MultiLayerPerceptron implements Cloneable
 		}
 		catch (Exception e) 
 		{ 
+			System.out.println("Problema con: " + e.getMessage());
 			return false;
 		}
 		
@@ -227,6 +229,7 @@ public class MultiLayerPerceptron implements Cloneable
 		}
 		catch (Exception e) 
 		{ 
+			System.out.println(e.getMessage());
 			return null;
 		}
 	}

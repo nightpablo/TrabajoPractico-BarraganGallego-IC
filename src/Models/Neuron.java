@@ -1,6 +1,8 @@
 package Models;
 
-public class Neuron 
+import java.io.Serializable;
+
+public class Neuron implements Serializable
 {
 	public double		Value;
 	public double[]		Weights;
