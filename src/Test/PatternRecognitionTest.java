@@ -20,6 +20,7 @@ public class PatternRecognitionTest
 	 */
 	public static void main(String[] args) 
 	{	
+//		System.out.println("HOLA");
 		TestPrecision(50);
 //		withoutLearning();
 	}
@@ -51,7 +52,7 @@ public class PatternRecognitionTest
 		
 		int size = 32;
 		double error = 0.0;
-		int nimagesxpatt = 89;
+		int nimagesxpatt = 21;
 		int npatt = 36;
 		
 		int[] layers = new int[]{ size*size, size, npatt };
@@ -67,7 +68,7 @@ public class PatternRecognitionTest
 			{
 				for(int j = 1; j < npatt+1; j++)
 				{		
-					String pattern = directory+"\\img\\patterns\\"+characterFolder[j-1].getName()+"\\"+k+".png";
+					String pattern = directory+"\\img\\patterns\\"+characterFolder[j-1].getName()+"\\"+k+"-"+characterFolder[j-1].getName()+".png";
 					double[] inputs = ImageProcessingBW.loadImage(pattern, size, size);
 					
 					if(inputs == null)
@@ -92,25 +93,26 @@ public class PatternRecognitionTest
 		}
 		
 		System.out.println("¡Aprendizaje Completada!");
-		
-		/* Test */
-		int correct = 0;
-		
-	
-		double[] inputs = ImageProcessingBW.loadImage(directory+"\\img\\test.png", size, size);
-		double[] output = net.execute(inputs);
-
-		int max = 0;
-		for(int i = 0; i < npatt; i++)
-			if(output[i] > output[max])
-			{
-				max = i;
-			}
-		
-		System.out.println("El valor máximo es: "+String.format ("%.2f", (float)output[max] * 100)+"%. El caracter de la imagen corresponde a: "+characterFolder[max].getName());
-		
-		
 		net.save(directory+"\\resources\\red.txt");
 		
+		/* Test */
+//		int correct = 0;
+//		
+//	
+//		double[] inputs = ImageProcessingBW.loadImage(directory+"\\img\\test.png", size, size);
+//		double[] output = net.execute(inputs);
+//
+//		int max = 0;
+//		for(int i = 0; i < npatt; i++)
+//			if(output[i] > output[max])
+//			{
+//				max = i;
+//			}
+//		
+//		System.out.println("El valor máximo es: "+String.format ("%.2f", (float)output[max] * 100)+"%. El caracter de la imagen corresponde a: "+characterFolder[max].getName());
+		
+		
+		
 	}
+	
 }
