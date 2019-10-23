@@ -138,7 +138,7 @@ public class MultiLayerPerceptron implements Cloneable, Serializable
 		
 		/* doutput = salida correcta (output) */
 		
-		// Calculamos el error de la salida
+		// Calculamos el error de cada salida
 		for(i = 0; i < fLayers[fLayers.length - 1].Length; i++)
 		{
 			error = output[i] - new_output[i];
