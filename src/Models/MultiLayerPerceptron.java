@@ -115,6 +115,13 @@ public class MultiLayerPerceptron implements Cloneable, Serializable
 	}
 
 	
+	public double geneticAlgorithm(double[] input, double[] output)
+	{
+		
+		return 0.0;
+	}
+	
+	
 	
 	/**
 	 * Algoritmo de retropropagación para aprendizaje asistido
